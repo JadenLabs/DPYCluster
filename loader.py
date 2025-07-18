@@ -73,7 +73,7 @@ def runfile(dir: str, start: str, tag: str, args: list[str] = [], **kwargs):
     rprint(f"{CLI.loader}{CLI.info} Opening file: `{full_path}`")
 
     process = subprocess.Popen(
-        [sys.executable, "-u", start, *args],
+        [sys.executable, "-O", "-u", start, *args],
         cwd=dir or ".",
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
