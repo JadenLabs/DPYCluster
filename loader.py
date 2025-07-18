@@ -28,6 +28,15 @@ class CLI:
 
 
 def github(dir: str, github: str, github_branch: str = "master"):
+    if not os.path.exists(dir):
+        rprint(
+            f"{CLI.loader}{CLI.warning} Directory '{dir}' not found, cloning from {github}"
+        )
+        subprocess.run(
+            ["git", "clone", "--branch", github_branch, github, dir], check=True
+        )
+        return
+
     git_dir = os.path.join(dir, ".git")
     if not os.path.isdir(git_dir):
         rprint(
