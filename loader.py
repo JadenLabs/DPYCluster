@@ -17,6 +17,13 @@ bot_info = [
         "github": "https://github.com/jadenlabs/Taiga",
         "github_branch": "master",
     },
+    {
+        "dir": "Grim",
+        "start": "start.py",
+        "tag": "[Grim]",
+        "github": "https://github.com/Grimwald-SMP/Grim",
+        "github_branch": "master",
+    },
 ]
 
 
